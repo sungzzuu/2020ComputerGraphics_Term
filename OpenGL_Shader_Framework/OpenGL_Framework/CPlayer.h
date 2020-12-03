@@ -15,6 +15,8 @@ public:
 	virtual void Draw() override;
 	virtual void Release() override;
 	virtual void Set_ModelTransform() override;
+private:
+	int test;
 
 };
 
