@@ -4,7 +4,7 @@
 typedef struct modelTransform
 {
 	glm::vec3 Scale{1.f, 1.f, 1.f};
-	glm::vec3 Rotate{ -30.f, 30.f, 0.f };
+	glm::vec3 Rotate{ 30.f, 30.f, 0.f };
 	glm::vec3 Translate{ 0.f, 0.f, 0.f };
 	glm::vec3 Revolution{ 0.f, 0.f, 0.f };
 	glm::vec3 pivot{ 0.f,0.f,0.f };

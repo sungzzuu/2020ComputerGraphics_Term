@@ -3,7 +3,7 @@
 class COriginal_Shape : public CObj
 {
 public:
-	COriginal_Shape(GLint _shader_program);
+	COriginal_Shape(GLuint* _shader_program);
 	~COriginal_Shape();
 
 public:

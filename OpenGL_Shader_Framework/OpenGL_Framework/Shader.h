@@ -17,7 +17,7 @@ private:
 	void Upadte_Shader_Program();
 
 public:
-	const GLuint& Get_shaderProgram() { return shader_program; }
+	GLuint* Get_shaderProgram() { return &shader_program; }
 
 private:
 	GLchar* vertexsource, *fragmentsource;	// 소스코드 저장 변수

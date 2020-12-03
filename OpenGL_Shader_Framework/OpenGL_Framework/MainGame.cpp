@@ -41,27 +41,27 @@ void CMainGame::Add_Object(OBJID::OBJ _objID)
 		 pObj = new CPlayer(Shader.Get_shaderProgram());
 	}
 	else {
-		pObj = new COriginal_Shape(Shader.Get_shaderProgram());
-		// 삼각형
-		glm::vec3 color = { 1.f, 0.f,0.f };
-		pObj->Get_Object().vertices.emplace_back(glm::vec3(0.f, 1.f, 0.f));
-		pObj->Get_Object().vertices.emplace_back(glm::vec3(-1.f, -1.f, 0.f));
-		pObj->Get_Object().vertices.emplace_back(glm::vec3(1.f, -1.f, 0.f));
+		//pObj = new COriginal_Shape(Shader.Get_shaderProgram());
+		//// 삼각형
+		//glm::vec3 color = { 1.f, 0.f,0.f };
+		//pObj->Get_Object().vertices.emplace_back(glm::vec3(0.f, 1.f, 0.f));
+		//pObj->Get_Object().vertices.emplace_back(glm::vec3(-1.f, -1.f, 0.f));
+		//pObj->Get_Object().vertices.emplace_back(glm::vec3(1.f, -1.f, 0.f));
 
-		pObj->Get_Object().color.emplace_back(color);
-		pObj->Get_Object().color.emplace_back(color);
-		pObj->Get_Object().color.emplace_back(color);
+		//pObj->Get_Object().color.emplace_back(color);
+		//pObj->Get_Object().color.emplace_back(color);
+		//pObj->Get_Object().color.emplace_back(color);
 
-		if (LEFT_TURN == m_add_Turn) {
-			// x,y 각각의 이동량
-			// 처음 위치 
-			// => 두 값 세트로 
-			//pObj->Set_Translate(glm::vec3(-1.f, 1.f, 0.f));
+		//if (LEFT_TURN == m_add_Turn) {
+		//	// x,y 각각의 이동량
+		//	// 처음 위치 
+		//	// => 두 값 세트로 
+		//	//pObj->Set_Translate(glm::vec3(-1.f, 1.f, 0.f));
 
-		}
-		else {
+		//}
+		//else {
 
-		}
+		//}
 	}
 	list_objects[_objID].emplace_back(pObj);
 }

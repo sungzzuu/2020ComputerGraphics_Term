@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Original_Shape.h"
 
-COriginal_Shape::COriginal_Shape(GLint _shader_program)
+COriginal_Shape::COriginal_Shape(GLuint* _shader_program)
 	:CObj(_shader_program)
 {
 }
@@ -29,9 +29,9 @@ void COriginal_Shape::Draw()
 	glLineWidth(1.f);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-	unsigned int modelLocation = glGetUniformLocation(shader_program, "model");
-	unsigned int viewLocation = glGetUniformLocation(shader_program, "view");
-	unsigned int projLocation = glGetUniformLocation(shader_program, "projection");
+	unsigned int modelLocation = glGetUniformLocation(*shader_program, "model");
+	unsigned int viewLocation = glGetUniformLocation(*shader_program, "view");
+	unsigned int projLocation = glGetUniformLocation(*shader_program, "projection");
 	// ============================= ∞Ì¡§ ============================================
 
 
