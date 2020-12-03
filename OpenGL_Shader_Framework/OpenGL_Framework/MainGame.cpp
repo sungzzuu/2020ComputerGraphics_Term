@@ -38,10 +38,10 @@ void CMainGame::Add_Object(OBJID::OBJ _objID)
 {
 	CObj* pObj = nullptr;
 	if (_objID == OBJID::PLAYER) {
-		 pObj = new CPlayer(Shader.Get_shaderProgram());
+		 pObj = new CPlayer(*Shader.Get_shaderProgram());
 	}
 	else {
-		pObj = new COriginal_Shape(Shader.Get_shaderProgram());
+		pObj = new COriginal_Shape(*Shader.Get_shaderProgram());
 		// »ï°¢Çü
 		glm::vec3 color = { 1.f, 0.f,0.f };
 		pObj->Get_Object().vertices.emplace_back(glm::vec3(0.f, 1.f, 0.f));

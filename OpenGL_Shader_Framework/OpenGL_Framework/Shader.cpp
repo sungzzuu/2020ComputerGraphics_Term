@@ -19,7 +19,7 @@ void CShader::Initialize_Shader()
 void CShader::Upadate_Shader(GLuint _vao, GLuint _vbo[2], const OBJECT& _object)
 {
 	Update_buffer(_vao, _vbo, _object);
-	Upadte_Shader_Program();
+	Update_Shader_Program();
 }
 
 void CShader::make_vertexShader()
@@ -74,24 +74,24 @@ void CShader::Update_buffer(GLuint _vao, GLuint _vbo[2], const OBJECT& _object)
 	glEnableVertexAttribArray(1);	// attribute 인덱스 1번 사용가능하도록함
 }
 
-void CShader::Upadte_Shader_Program()
+void CShader::Update_Shader_Program()
 {
 	// Update_buffer 에서 갱신된 정보를 쉐이더 프로그램에 연결한다?
-	shader_program = glCreateProgram();
-	glAttachShader(shader_program, vertexshader);
-	glAttachShader(shader_program, fragmentshader);
-	glLinkProgram(shader_program);
+	*shader_program = glCreateProgram();
+	glAttachShader(*shader_program, vertexshader);
+	glAttachShader(*shader_program, fragmentshader);
+	glLinkProgram(*shader_program);
 
 	GLint result;
 	GLchar error[512];
 
-	glGetProgramiv(shader_program, GL_LINK_STATUS, &result);
+	glGetProgramiv(*shader_program, GL_LINK_STATUS, &result);
 	if (!result) {
-		glGetProgramInfoLog(shader_program, 512, NULL, error);
+		glGetProgramInfoLog(*shader_program, 512, NULL, error);
 		cerr << "ERROR: shader program 연결 실패\n" << error << endl;
 		return;
 	}
 	glDeleteShader(vertexshader);
 	glDeleteShader(fragmentshader);
-	glUseProgram(shader_program);
+	glUseProgram(*shader_program);
 }
