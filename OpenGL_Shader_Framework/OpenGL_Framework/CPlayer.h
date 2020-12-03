@@ -17,6 +17,7 @@ public:
 	virtual void Set_ModelTransform() override;
 private:
 	int test;
+	int test2;
 
 };
 
