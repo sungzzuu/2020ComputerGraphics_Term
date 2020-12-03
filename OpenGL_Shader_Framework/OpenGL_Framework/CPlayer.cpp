@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CPlayer.h"
 
-CPlayer::CPlayer(GLint _shader_program)
+CPlayer::CPlayer(GLuint* _shader_program)
 	:CObj(_shader_program)
 {
 	Initialize();
@@ -14,7 +14,7 @@ CPlayer::~CPlayer()
 void CPlayer::Initialize()
 { 
 	loadObj<const char*, OBJECT, glm::vec3>("cube.obj", object, glm::vec3(1.0, 0.0, 0.0));
-
+	
 }
 
 void CPlayer::Update()
@@ -29,22 +29,46 @@ void CPlayer::Draw()
 {
 	
 	glEnable(GL_DEPTH_TEST);
-	unsigned int modelLocation = glGetUniformLocation(shader_program, "model");
-	unsigned int viewLocation = glGetUniformLocation(shader_program, "view");
-	unsigned int projLocation = glGetUniformLocation(shader_program, "projection");
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	unsigned int modelLocation = glGetUniformLocation(*shader_program, "model");
+	unsigned int viewLocation = glGetUniformLocation(*shader_program, "view");
+	unsigned int projLocation = glGetUniformLocation(*shader_program, "projection");
 	// ============================= 고정 ============================================
 
 
 	
 	// 카메라 좌표 설정
+<<<<<<< HEAD
 	glm::vec3 cameraPos = {0.f,0.f,1.f};
 	glm::vec3 cameraDirection = {0.f,0.f,-1.f};
+=======
+	glm::vec3 cameraPos = { 0.f,0.f, 5.f };
+	glm::vec3 cameraDirection = { 0.f,0.f,0.f };
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 	glm::vec3 cameraUp = { 0.f,1.f,0.f };
 
 
 
 
+<<<<<<< HEAD
 	
+=======
+	glm::mat4 view = glm::mat4(1.f);
+	glm::mat4 view_Rotate = glm::mat4(1.f);
+	view_Rotate = glm::rotate(view_Rotate, glm::radians(0.f), glm::vec3(0.0, 1.0, 0.0));
+
+	view = glm::lookAt(cameraPos, cameraDirection, cameraUp);
+	glUniformMatrix4fv(viewLocation, 1, GL_FALSE, &view[0][0]);
+	// ============================= 뷰 변환 ============================================
+
+	// ============================= 투영 변환 ============================================
+	glm::mat4 projection = glm::mat4(1.f);
+	projection = glm::perspective(glm::radians(45.f), (float)WINCX / (float)WINCY, 0.1f, 100.f);
+	glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projection[0][0]);
+	// ============================= 투영 변환 ============================================
+
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 	glm::mat4 Scale = glm::mat4(1.f);
 
 	glm::mat4 RotateX = glm::mat4(1.f);

@@ -4,7 +4,7 @@
 class CPlayer : public CObj
 {
 public:
-	CPlayer(GLint _shader_program);
+	CPlayer(GLuint* _shader_program);
 	~CPlayer();
 
 public:

@@ -1,8 +1,40 @@
+<<<<<<< HEAD
 ﻿  Shader.cpp
 C:\Users\박성준\Documents\GitHub\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(11,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\박성준\Documents\GitHub\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Shader.cpp(27): message : 컴파일되는 함수 템플릿 인스턴스화 'char *filetobuf<const char[12]>(T (&))'에 대한 참조를 확인하세요.
+=======
+﻿  pch.cpp
+  CPlayer.cpp
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(32,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\CPlayer.cpp(16): message : 컴파일되는 함수 템플릿 인스턴스화 'bool loadObj<const char*,OBJECT,glm::vec3>(T1,T2 &,T3)'에 대한 참조를 확인하세요.
+          with
+          [
+              T1=const char *,
+              T2=OBJECT,
+              T3=glm::vec3
+          ]
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(41,13): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(46,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(51,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(56,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(62,18): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  MainGame.cpp
+  Obj.cpp
+  OpenGL_Framework.cpp
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\OpenGL_Framework.cpp(90,2): warning C4065: switch문에 'default'가 있으나 'case' 레이블이 없습니다.
+  Original_Shape.cpp
+  Shader.cpp
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(11,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Shader.cpp(27): message : 컴파일되는 함수 템플릿 인스턴스화 'char *filetobuf<const char[12]>(T (&))'에 대한 참조를 확인하세요.
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
           with
           [
               T=const char [12]
           ]
+<<<<<<< HEAD
   OpenGL_Framework.vcxproj -> C:\Users\박성준\Documents\GitHub\2020ComputerGraphics_Term\OpenGL_Shader_Framework\Debug\OpenGL_Framework.exe
+=======
+  코드를 생성하고 있습니다...
+C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\OpenGL_Framework\Function.h(91): warning C4715: 'loadObj<char const *,Object,glm::vec<3,float,0> >': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  OpenGL_Framework.vcxproj -> C:\Users\윤성주\Desktop\20_2학기\컴퓨터 그래픽스\기말 텀프\2020ComputerGraphics_Term\OpenGL_Shader_Framework\Debug\OpenGL_Framework.exe
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e

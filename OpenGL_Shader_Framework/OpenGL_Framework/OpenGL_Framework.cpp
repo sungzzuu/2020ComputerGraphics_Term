@@ -65,7 +65,7 @@ GLvoid drawScene(GLvoid)
 
 	/////// 셰이더
 	maingame.Update_MainGame();
-	maingame.Draw_MainGame();
+	//maingame.Draw_MainGame();
 
 	glutPostRedisplay();
 
@@ -95,7 +95,6 @@ GLvoid Timer(int value)
 	// 메인루프
 	if (TIMER_MAIN == value) {
 		glutTimerFunc(10, Timer, TIMER_MAIN);
-		glutPostRedisplay();
 	}
 	if (TIMER_ADD == value) {
 		maingame.Add_Object(OBJID::PLAYER);

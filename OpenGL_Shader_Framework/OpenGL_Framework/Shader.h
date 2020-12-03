@@ -17,7 +17,11 @@ private:
 	void Update_Shader_Program();
 
 public:
+<<<<<<< HEAD
 	GLuint* Get_shaderProgram() { return shader_program; }
+=======
+	GLuint* Get_shaderProgram() { return &shader_program; }
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 
 private:
 	GLchar* vertexsource, *fragmentsource;	// 소스코드 저장 변수
