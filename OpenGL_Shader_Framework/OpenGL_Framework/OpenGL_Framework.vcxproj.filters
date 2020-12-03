@@ -13,9 +13,6 @@
     <Filter Include="97.Shader_glsl">
       <UniqueIdentifier>{54dce45f-4ad1-4486-a753-3815f018bd65}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.Shader_Func">
-      <UniqueIdentifier>{5580a393-0cae-4f17-82ee-04fde1af712d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03.Obj">
       <UniqueIdentifier>{cc210885-78b2-43cd-a13b-6df3f922939c}</UniqueIdentifier>
     </Filter>
@@ -25,14 +22,11 @@
     <Filter Include="02.Shader">
       <UniqueIdentifier>{7fe128e1-4cb5-4fe7-82c4-96a561054ccd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.Obj\01.Sliced_Shape">
-      <UniqueIdentifier>{4ee86166-72d8-4364-ac56-d01726f591d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="03.Obj\03.Slice_Table">
-      <UniqueIdentifier>{4dfeb81f-4ab9-4f06-a08d-5feaa5799a4e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03.Obj\00.Original_Shape">
       <UniqueIdentifier>{67417f3b-2eeb-4917-ad7b-e1c977971977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Obj\01.Player">
+      <UniqueIdentifier>{5b9c4638-298d-439f-807c-9b4d2b88a5a1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -41,9 +35,6 @@
     </ClCompile>
     <ClCompile Include="OpenGL_Framework.cpp">
       <Filter>00.Main</Filter>
-    </ClCompile>
-    <ClCompile Include="CShader_Func.cpp">
-      <Filter>02.Shader_Func</Filter>
     </ClCompile>
     <ClCompile Include="MainGame.cpp">
       <Filter>01.MainGame</Filter>
@@ -57,6 +48,9 @@
     <ClCompile Include="Original_Shape.cpp">
       <Filter>03.Obj\00.Original_Shape</Filter>
     </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>03.Obj\01.Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -67,9 +61,6 @@
     </ClInclude>
     <ClInclude Include="Headers.h">
       <Filter>98.Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="CShader_Func.h">
-      <Filter>02.Shader_Func</Filter>
     </ClInclude>
     <ClInclude Include="Struct.h">
       <Filter>98.Headers</Filter>
@@ -91,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Original_Shape.h">
       <Filter>03.Obj\00.Original_Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>03.Obj\01.Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

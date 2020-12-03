@@ -22,7 +22,7 @@ char* filetobuf(T& file)
 }
 
 template <typename T1, typename T2, typename T3>
-bool loadObj(T1& path, T2& object, T3 _color)
+bool loadObj(T1 path, T2& object, T3 _color)
 {
 	std::vector<unsigned int> vertexIndices, uvIndices, normalIndices;
 	std::vector<glm::vec3> temp_vertices;
@@ -87,6 +87,7 @@ bool loadObj(T1& path, T2& object, T3 _color)
 		object.color.push_back(_color);
 
 	}
+	cout << "load success" << endl;
 }
 
 template <typename T>

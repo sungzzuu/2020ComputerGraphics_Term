@@ -1,5 +1,4 @@
 ﻿#include "pch.h"
-#include "CShader_Func.h"
 #include "MainGame.h"
 
 
@@ -96,9 +95,10 @@ GLvoid Timer(int value)
 	// 메인루프
 	if (TIMER_MAIN == value) {
 		glutTimerFunc(10, Timer, TIMER_MAIN);
+		glutPostRedisplay();
 	}
 	if (TIMER_ADD == value) {
-		maingame.Add_Object(OBJID::ORIGINAL_SHAPE);
+		maingame.Add_Object(OBJID::PLAYER);
 
 		//glutTimerFunc(ADD_TIME, Timer, TIMER_ADD);
 
