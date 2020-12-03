@@ -27,6 +27,7 @@ void CPlayer::Late_Update()
 
 void CPlayer::Draw()
 {
+	
 	glEnable(GL_DEPTH_TEST);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -36,15 +37,23 @@ void CPlayer::Draw()
 	// ============================= 고정 ============================================
 
 
-	// ============================= 뷰 변환 ============================================
+	
 	// 카메라 좌표 설정
+<<<<<<< HEAD
+	glm::vec3 cameraPos = {0.f,0.f,1.f};
+	glm::vec3 cameraDirection = {0.f,0.f,-1.f};
+=======
 	glm::vec3 cameraPos = { 0.f,0.f, 5.f };
 	glm::vec3 cameraDirection = { 0.f,0.f,0.f };
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 	glm::vec3 cameraUp = { 0.f,1.f,0.f };
 
 
 
 
+<<<<<<< HEAD
+	
+=======
 	glm::mat4 view = glm::mat4(1.f);
 	glm::mat4 view_Rotate = glm::mat4(1.f);
 	view_Rotate = glm::rotate(view_Rotate, glm::radians(0.f), glm::vec3(0.0, 1.0, 0.0));
@@ -59,6 +68,7 @@ void CPlayer::Draw()
 	glUniformMatrix4fv(projLocation, 1, GL_FALSE, &projection[0][0]);
 	// ============================= 투영 변환 ============================================
 
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 	glm::mat4 Scale = glm::mat4(1.f);
 
 	glm::mat4 RotateX = glm::mat4(1.f);
@@ -94,6 +104,28 @@ void CPlayer::Draw()
 
 	glUniformMatrix4fv(modelLocation, 1, GL_FALSE, glm::value_ptr(Result));
 
+
+	// ============================= 뷰 변환 ============================================
+	glm::mat4 view = glm::mat4(1.f);
+	glm::mat4 view_Rotate = glm::mat4(1.f);
+	view_Rotate = glm::rotate(view_Rotate, glm::radians(0.f), glm::vec3(0.0, 1.0, 0.0));
+
+	view = glm::lookAt(cameraPos, cameraDirection, cameraUp);
+	glUniformMatrix4fv(viewLocation, 1, GL_FALSE, glm::value_ptr(view));
+	// ============================= 뷰 변환 ============================================
+
+
+
+
+
+
+	// ============================= 투영 변환 ============================================
+	glm::mat4 projection = glm::mat4(1.f);
+	projection = glm::perspective(glm::radians(60.f), (float)WINCX / (float)WINCY, 0.1f, 200.f);
+	glUniformMatrix4fv(projLocation, 1, GL_FALSE, glm::value_ptr(projection));
+	// ============================= 투영 변환 ============================================
+
+	cout << object.model_transform.Translate.x<<','<< object.model_transform.Translate.y<<','<< object.model_transform.Translate.z << endl;
 	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, object.vertices.size());
 }

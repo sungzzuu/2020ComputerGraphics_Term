@@ -38,15 +38,24 @@ void CMainGame::Add_Object(OBJID::OBJ _objID)
 {
 	CObj* pObj = nullptr;
 	if (_objID == OBJID::PLAYER) {
-		 pObj = new CPlayer(Shader.Get_shaderProgram());
+		 pObj = new CPlayer(*Shader.Get_shaderProgram());
 	}
 	else {
+<<<<<<< HEAD
+		pObj = new COriginal_Shape(*Shader.Get_shaderProgram());
+		// »ï°¢Çü
+		glm::vec3 color = { 1.f, 0.f,0.f };
+		pObj->Get_Object().vertices.emplace_back(glm::vec3(0.f, 1.f, 0.f));
+		pObj->Get_Object().vertices.emplace_back(glm::vec3(-1.f, -1.f, 0.f));
+		pObj->Get_Object().vertices.emplace_back(glm::vec3(1.f, -1.f, 0.f));
+=======
 		//pObj = new COriginal_Shape(Shader.Get_shaderProgram());
 		//// »ï°¢Çü
 		//glm::vec3 color = { 1.f, 0.f,0.f };
 		//pObj->Get_Object().vertices.emplace_back(glm::vec3(0.f, 1.f, 0.f));
 		//pObj->Get_Object().vertices.emplace_back(glm::vec3(-1.f, -1.f, 0.f));
 		//pObj->Get_Object().vertices.emplace_back(glm::vec3(1.f, -1.f, 0.f));
+>>>>>>> 95710e820d8c7be0f35a2537d14fa7534e7b942e
 
 		//pObj->Get_Object().color.emplace_back(color);
 		//pObj->Get_Object().color.emplace_back(color);
